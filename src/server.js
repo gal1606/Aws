@@ -46,8 +46,8 @@ app.post('/login', (req, res) => {
   if (email === 'user@example.com' && password === 'password') {
     req.session.isAuthenticated = true;
     console.log('Authentication successful');
-    res.redirect('http://finallb-1119723557.us-east-1.elb.amazonaws.com:3000/employees'); // Redirect to employees route
-  } else {
+    res.redirect('/employees');
+    } else {
     console.log('Authentication failed');
     res.redirect('/');
   }
